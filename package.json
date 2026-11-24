@@ -1,6 +1,5 @@
 {
-  "name": "akacampus-app",
-  "name": "client",
+  "name": "akacampus",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

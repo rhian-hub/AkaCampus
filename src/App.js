@@ -1,31 +1,38 @@
-// import { Routes, Route, Link } from "react-router-dom";
-// import TuitionFees from "./pages/TuitionFees";
-// import Scholarships from "./pages/Scholarships";
-// import SchoolComparison from "./pages/SchoolComparison";
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SideNav from './components/SideNav';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Directory from './pages/Directories';
+import SchoolDetails from './pages/SchoolDetails';
 
-// function App() {
-//   return (
-//     <>
-//       <nav>
-//         <Link to="/tuition">Tuition & Fees</Link>{" | "}
-//         <Link to="/scholarships">Scholarships</Link>{" | "}
-//         <Link to="/compare">Compare Schools</Link>
-//       </nav>
 
-//       <Routes>
-//         <Route path="/tuition-fees" element={<TuitionFees />} />
-//         <Route path="/scholarships" element={<Scholarships />} />
-//         <Route path="/compare" element={<SchoolComparison />} />
-//       </Routes>
-//     </>
-//   );
-// }
+export default function App() {
+  const [open, setOpen] = useState(false);
 
-// export default App;
-import TuitionFees from "./pages/TuitionFees";
-
-function App() {
-  return <TuitionFees />;
+  return (
+    <BrowserRouter>
+      <SideNav open={open} onClose={() => setOpen(false)} />
+      <div className="app-main">
+        <header className="topbar">
+          <button
+            className="btn btn-outline-light btn-sm"
+            onClick={() => setOpen(true)}
+            aria-label="Open navigation menu"
+          >
+            Menu
+          </button>
+          <strong>School Finder</strong>
+        </header>
+        <main className="app-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/schools" element={<Directories />} />
+            <Route path="/schools/:id" element={<SchoolDetails />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
-
-export default App;
