@@ -1,38 +1,27 @@
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SideNav from './components/SideNav';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Directory from './pages/Directories';
-import SchoolDetails from './pages/SchoolDetails';
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import TuitionFees from "./pages/TuitionFees";
+import Scholarships from "./pages/Scholarships";
+import SchoolComparison from "./pages/SchoolComparison";
 
-
-export default function App() {
-  const [open, setOpen] = useState(false);
-
+function App() {
   return (
-    <BrowserRouter>
-      <SideNav open={open} onClose={() => setOpen(false)} />
-      <div className="app-main">
-        <header className="topbar">
-          <button
-            className="btn btn-outline-light btn-sm"
-            onClick={() => setOpen(true)}
-            aria-label="Open navigation menu"
-          >
-            Menu
-          </button>
-          <strong>School Finder</strong>
-        </header>
-        <main className="app-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/schools" element={<Directories />} />
-            <Route path="/schools/:id" element={<SchoolDetails />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <>
+      <nav style={{ display: "flex", gap: 12, padding: 12, background: "#eef" }}>
+        <Link to="/">Home</Link>
+        <Link to="/tuition-fees">Tuition Fees</Link>
+        <Link to="/scholarships">Scholarships</Link>
+        <Link to="/compare">Compare</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tuition-fees" element={<TuitionFees />} />
+        <Route path="/scholarships" element={<Scholarships />} />
+        <Route path="/compare" element={<SchoolComparison />} />
+      </Routes>
+    </>
   );
 }
+
+export default App;

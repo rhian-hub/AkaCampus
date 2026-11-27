@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/schools', label: 'School directory' },
-  { to: '/team', label: 'Team roles' },
 ];
 
 export default function SideNav({ open, onClose }) {

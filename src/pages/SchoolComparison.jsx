@@ -1,5 +1,10 @@
-function SchoolComparison() {
-  return <h1>School Comparison</h1>;
+
+const SchoolComparison = () => {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
-export default SchoolComparison;
+export default SchoolComparison

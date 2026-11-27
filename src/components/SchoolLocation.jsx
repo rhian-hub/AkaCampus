@@ -61,67 +61,67 @@ export const schools = [
   },
   {
     id: 9,
-    name: "PGA-ASU School of Nursing",
-    town: "Kalibo",
-    type: "Public",
-    address: "DRSTMH Compound, Mabini Street, Kalibo, 5600 Aklan, Philippines",
-  },
-  {
-    id: 10,
     name: "Aklan Polytechnic College - Maritime Training Center",
     town: "New Washington",
     type: "Private",
     address: "Tambak, New Washington, 5610 Aklan, Philippines",
   },
   {
-    id: 11,
+    id: 10,
     name: "Balete Community College",
     town: "Balete",
     type: "Local college",
     address: "Poblacion, Balete, 5614 Aklan, Philippines",
   },
   {
-    id: 12,
+    id: 11,
     name: "Altavas College",
     town: "Altavas",
     type: "Local college",
     address: "Poblacion, Altavas, 5616 Aklan, Philippines",
   },
   {
-    id: 13,
+    id: 12,
     name: "Malay College",
     town: "Malay",
     type: "Local college",
     address: "Balusbos, Malay, 5608 Aklan, Philippines",
   },
   {
-    id: 14,
+    id: 13,
     name: "Lezo Technical College",
     town: "Lezo",
     type: "Private",
     address: "St. Isidro Street, Poblacion, Lezo, 5605 Aklan, Philippines",
   },
   {
-    id: 15,
+    id: 14,
     name: "Libacao College of Science and Technology",
     town: "Libacao",
     type: "Local college",
     address: "Malanga, Libacao, 5602 Aklan, Philippines",
   },
   {
-    id: 16,
+    id: 15,
     name: "Batan Integrated College of Technology",
     town: "Batan",
     type: "Local college",
     address: "1 Datu Magkawit Street, Batan, 5615 Aklan, Philippines",
   },
-
-  // JAVTES College        - Arch. Reyes Street, Kalibo
-  // Central Panay College of Science and Technology
-  //                       - Delmabel Bldg., Osmeña Avenue, Estancia, Kalibo
-  // Western Pacific College - Osmeña Avenue, Tigayon, Kalibo
-  // Santo Niño Seminary (Numancia) is also left out: DepEd lists it as a basic-education school.
+  {
+    id: 16,
+    name: "Joselito Alba Vocational and Technical School, Inc. - JAVTES",
+    town: "Kalibo",
+    type: "Private",
+    address: "Arch. Reyes Street, Kalibo, 5600 Aklan, Philippines",
+  },
+  {
+    id: 17,
+    name: "Central Panay College of Science and Technology",
+    town: "Kalibo",
+    type: "Private",
+    address: "Delmabel Bldg., Osmeña Avenue, Estancia, Kalibo, 5600 Aklan, Philippines",
+  },
 ];
 
 export default SchoolLocation;
-
